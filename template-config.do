@@ -74,14 +74,14 @@ local variant = cond(c(MP),"MP",cond(c(SE),"SE",c(flavor)) )
 // alternatively, you could use 
 // local variant = cond(c(stata_version)>13,c(real_flavor),"NA")  
 
-di "=== SYSTEM DIAGNOSTICS ==="
-di "Stata version: `c(stata_version)'"
-di "Updated as of: `c(born_date)'"
-di "Variant:       `variant'"
-di "Processors:    `c(processors)'"
-di "OS:            `c(os)' `c(osdtl)'"
-di "Machine type:  `c(machine_type)'"
-di "=========================="
+di _newline(2) "=== SYSTEM DIAGNOSTICS ===" 		///
+_newline "Stata version: `c(stata_version)'" 	///
+_newline "Updated as of: `c(born_date)'" 	///
+_newline "Variant:       `variant'" 		///
+_newline "Processors:    `c(processors)'" 	///
+_newline "OS:            `c(os)' `c(osdtl)'" 	///
+_newline "Machine type:  `c(machine_type)'" 	///
+_newline "=========================="
 
 
 /* install any packages locally */
